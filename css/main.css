@@ -21,19 +21,299 @@ li {
     list-style: none;
 }
 
-html {}
+html {
+    font-size: 10px;
+    overflow-y: hidden;
+}
+
+html {
+    scrollbar-3dLight-Color: #efefef;
+    scrollbar-arrow-color: #dfdfdf;
+    scrollbar-base-color: #efefef;
+    scrollbar-Face-Color: #dfdfdf;
+    scrollbar-Track-Color: #efefef;
+    scrollbar-DarkShadow-Color: #efefef;
+    scrollbar-Highlight-Color: #efefef;
+    scrollbar-Shadow-Color: #efefef;
+    -ms-overflow-style: none;
+    /* overflow: auto; */
+}
+
+/* SCROLL */
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+/* 스크롤바의 width */
+::-webkit-scrollbar-track {
+    background-color: #619ab4;
+}
+
+/* 스크롤바의 전체 배경색 */
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(to bottom, #1697bf, #62b7ac);
+}
+
+/* 스크롤바 색 */
+::-webkit-scrollbar-button {
+    display: none;
+}
 
 body {}
 
+h2 {
+    font-size: 6rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+}
+
 /* 공통사항 */
+/* 포토샵   
+    1600 px * 5000 px / 72px 
+    1300 px * 970px (내용영역)
+*/
 .container {
     position: relative;
     display: block;
-    width: 100%;
+    width: 130rem;
+    height: 97rem;
     margin: 0 auto;
 }
+
+/* 햄버거 메뉴 */
+.fix-menu {
+    position: fixed;
+    right: -22rem;
+    top: 2rem;
+    width: 5rem;
+    height: 5rem;
+
+    border: 0;
+    background: rgba(0, 0, 0, 0.8);
+    cursor: pointer;
+    z-index: 99999;
+}
+.fix-menu:hover {
+    background: rgba(0, 0, 0, 1.0);
+}
+
+.fix-menu-active {
+    right: 2rem;
+}
+
+.fix-menu::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 4px;
+    background-color: #fff;
+}
+.fix-menu::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 4px;
+    background-color: #fff;
+}
+
+.fix-menu span {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    height: 4px;
+    background-color: #fff;
+}
+
+.fix-wrap {
+    position: fixed;
+    left: 100%;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: 9999;
+    transition: left 0.5s;
+}
+
+.fix-wrap-active {
+    left: 0%;
+}
+
+.fix-gnb a {
+    color: #fff;
+    font-size: 5rem;
+}
+
+
 
 .wrap {
     position: relative;
     display: block;
+}
+
+.header {
+    position: fixed;
+    left: 0;
+    top: 0;
+    display: block;
+    width: 100%;
+    height: 10rem;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+}
+
+.header .container {
+    height: 100%;
+}
+
+.logo {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    
+    color: #fff;
+    font-size: 3rem;
+    line-height: 10rem; 
+    text-align: center;
+    
+    padding: 0 3rem;
+
+    background-color: #000;   
+}
+
+.gnb {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    margin-left: 20rem;
+}
+.gnb > li {
+    float: left;
+}
+.gnb > li > a {
+    display: block;
+    color: #fff;
+    font-size: 2rem;
+    text-transform: uppercase;
+    line-height: 10rem;
+    font-weight: bold;
+    padding: 0 2rem;
+}
+
+/* visual */
+.visual {
+    position: relative;
+    height: 97rem;
+    background-color: #5999bf;
+}
+
+/* profile */
+.profile {
+    background-color: tan;
+    overflow: hidden;
+}
+
+.skill-wrap {
+    position: relative;
+    display: block;    
+}
+.skill-wrap > ul {
+    overflow: hidden;
+}
+.skill-wrap > ul > li {
+    font-size: 2rem;
+    overflow: hidden;
+    float:left;
+    width: 20%;
+    height: 10rem;
+}
+
+.skill-title {
+    float: left;
+    width: 30%;
+}
+.skill-cont {
+    float: right;
+    width: 70%;
+}
+
+#skill_html {
+    position: relative;
+    width: 80%;
+    height: 5rem;
+}
+
+#skill_css {
+    position: relative;
+    width: 10rem;
+    height: 10rem;
+}
+
+
+.front {
+    background-color: cornsilk;
+    overflow: hidden;
+}
+
+.front .container {
+    padding: 10rem;
+}
+.front-wrap {
+    position: relative;
+    display: block;
+    height: 55rem;
+}
+
+.front-menu {
+    width: 25%;
+    height: 100%;
+    background-color: darkkhaki;
+    float: left;
+}
+
+.front-main {
+    width: 70%;
+    height: 100%;
+    background-color: #fff;
+    float: right;
+    overflow: hidden;
+}
+
+.front-main img {
+    width: 100%;
+}
+
+/* publishing */
+.publ {
+    background-color: teal;
+    overflow: hidden;
+}
+
+/* 디자인 */
+.design {
+    background-color:bisque;
+    overflow: hidden;
+}
+
+/* life */
+.life {
+    background-color: cadetblue;
+    overflow: hidden;
+}
+
+/* contact */
+.contact {
+  background-color: #000;  
+  color: #fff;
+  height: 30rem;
+}
+.contact .container {
+    height: 100%;
 }

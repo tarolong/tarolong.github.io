@@ -8,28 +8,346 @@
     <link rel="apple-touch-icon-precomposed" href="images/mobile_web_icon.png">
     <meta name="viewport"
         content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
-    <title>SPC그룹</title>
+    <title>홍길동 포트폴리오</title>
     <!-- jquery -->
-    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script src="js/jquery.min.js"></script>
     <!-- html5shiv -->
     <!--[if lt IE 9]>
       <script src="js/html5shiv.js"></script>
     <![endif]-->
     <!-- vender-prefix -->
-    <!-- <script type="text/javascript" src="js/prefixfree.min.js"></script> -->
-
+    <script src="js/prefixfree.min.js"></script>
     <script src="js/respond.min.js"></script>
-
     <!-- swiper -->
     <link rel="stylesheet" href="js/swiper/swiper.min.css">
     <script src="js/swiper/swiper.min.js"></script>
+    <!-- scrollNice -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.nicescroll/3.7.6/jquery.nicescroll.min.js"></script>
+    <!-- Progressbar 관련 -->
+    <script src="js/progressbar/progressbar.js"></script>
     <!-- normalize.css -->
-    <link rel="stylesheet" type="text/css" href="css/normalize.css">
-    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/main.css">
+    <script src="js/script.js"></script>
 </head>
 
 <body>
+    <button class="fix-menu">
+        <span></span>
+    </button>
+    <div class="fix-wrap">
+        <ul class="fix-gnb">
+            <li><a href="#profile" class="move">Profile</a></li>
+            <li><a href="#publishing" class="move">Publishing</a></li>
+            <li><a href="#frontend" class="move">Front-end</a></li>
+            <li><a href="#design" class="move">Design</a></li>
+            <li><a href="#life" class="move">Life</a></li>
+            <li><a href="#contact" class="move">Contact</a></li>
+            <li><a href="https://github.com/tarolong" target="_blank">GitHub</a></li>
+        </ul>
+    </div>
+
     <div class="wrap">
+        <header class="header">
+
+            <div class="container">
+                <!-- 로고는 자신을 브랜딩 하는 것입니다. -->
+                <!-- favicon.ico / mobile-touch-icon.png -->
+                <a href="#" class="logo">logo</a>
+
+                <ul class="gnb">
+                    <li><a href="#profile" class="move">Profile</a></li>
+                    <li><a href="#publishing" class="move">Publishing</a></li>
+                    <li><a href="#frontend" class="move">Front-end</a></li>
+                    <li><a href="#design" class="move">Design</a></li>
+                    <li><a href="#life" class="move">Life</a></li>
+                    <li><a href="#contact" class="move">Contact</a></li>
+                    <li><a href="https://github.com/tarolong" target="_blank">GitHub</a></li>
+                    
+                </ul>
+            </div>
+
+        </header>
+
+        <!-- 표지 : 보기 좋으면서 기억에 남도록 구성하세요. -->
+        <section class="visual" id="visual">
+            <!--  http://www.hongsidesign.com/main/sub03_work/sub03_01_current_list.jsp -->
+            <!--  https://www.pinterest.co.kr/ -->
+        </section>
+
+        <section class="profile" id="profile">
+            <div class="container">
+                <!--  http://www.hongsidesign.com/main/sub03_work/sub03_01_current_list.jsp -->
+                <!-- MBTI, 인/적성 검사 결과 (사람인에서 가능) -->
+                <h2>Profile</h2>
+                <div class="profile-wrap">
+                    나의 좌우명,
+                    나의 사진(증명사진),
+                    이름, 생년월일, 이메일,
+                    교육경력
+                    수상경력,자격증
+                    스킬(progressbar.js)
+
+                    <div class="skill-wrap">
+                        <ul>
+                            <li>
+                                <div class="skill-title">HTML</div>
+                                <div class="skill-cont">
+                                    <div id="skill_html"></div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="skill-title">CSS</div>
+                                <div class="skill-cont">
+                                    <div id="skill_css"></div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="skill-title">JS</div>
+                                <div class="skill-cont"></div>
+                            </li>
+                            <li>
+                                <div class="skill-title">vue.js(3.x)</div>
+                                <div class="skill-cont"></div>
+                            </li>
+                            <li>
+                                <div class="skill-title">MySql</div>
+                                <div class="skill-cont"></div>
+                            </li>
+                            <li>
+                                <div class="skill-title">Bootstrab</div>
+                                <div class="skill-cont"></div>
+                            </li>
+                            <li>
+                                <div class="skill-title">photoshop</div>
+                                <div class="skill-cont"></div>
+                            </li>
+                            <li>
+                                <div class="skill-title">Illustrotor</div>
+                                <div class="skill-cont"></div>
+                            </li>
+                            <li>
+                                <div class="skill-title">VisualStidoCode</div>
+                                <div class="skill-cont"></div>
+                            </li>
+                            <li>
+                                <div class="skill-title">Office Tool</div>
+                                <div class="skill-cont"></div>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        
+        <section class="publ" id="publishing">
+            <div class="container">
+                <!-- swiper 로 구현하시기를 권장 합니다. -->
+                <h2>Publishing</h2>
+                <div class="publ-wrap">
+
+                    <!-- <div class="publ-box">
+                        타이틀
+                        섬네일 이미지,
+                        프로젝트 간략 설명,
+                        사용기술(HTML5, CSS3, JavaScript, jQuery), 
+
+                        a 결과물 보기 링크 _blank : ftp 호스팅, GitHub, 
+                        a GitHub 소스 링크,
+                        a 오리지널 사이트 링크 _blank
+                    </div> -->
+
+                    <div class="swiper-container sw-publ">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="publ-box">
+                                    <h3>SONY</h3>
+                                    <p><img src="http://placehold.it/250x350" alt=""></p>
+                                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatem cupiditate dolorum, optio aperiam tenetur corrupti natus dolore itaque, eveniet necessitatibus perferendis quod? Tempora facilis aspernatur reprehenderit eligendi suscipit soluta natus.</p>
+                                    <p>HTML5, CSS3, JavaScript, jQuery</p>
+                                    <ul>
+                                        <li><a href="work/sony/index.html" target="_blank">Work</a></li>
+                                        <li><a href="https://github.com/HalfMoonKim/04.sony.git" target="_blank">GitHub</a></li>
+                                        <li><a href="https://www.sony.co.kr/" target="_blank">Origin</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="publ-box">
+                                    <h3>SONY</h3>
+                                    <p><img src="http://placehold.it/250x350" alt=""></p>
+                                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatem cupiditate dolorum, optio aperiam tenetur corrupti natus dolore itaque, eveniet necessitatibus perferendis quod? Tempora facilis aspernatur reprehenderit eligendi suscipit soluta natus.</p>
+                                    <p>HTML5, CSS3, JavaScript, jQuery</p>
+                                    <ul>
+                                        <li><a href="work/sony/index.html" target="_blank">Work</a></li>
+                                        <li><a href="https://github.com/HalfMoonKim/04.sony.git" target="_blank">GitHub</a></li>
+                                        <li><a href="https://www.sony.co.kr/" target="_blank">Origin</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="publ-box">
+                                    <h3>SONY</h3>
+                                    <p><img src="http://placehold.it/250x350" alt=""></p>
+                                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatem cupiditate dolorum, optio aperiam tenetur corrupti natus dolore itaque, eveniet necessitatibus perferendis quod? Tempora facilis aspernatur reprehenderit eligendi suscipit soluta natus.</p>
+                                    <p>HTML5, CSS3, JavaScript, jQuery</p>
+                                    <ul>
+                                        <li><a href="work/sony/index.html" target="_blank">Work</a></li>
+                                        <li><a href="https://github.com/HalfMoonKim/04.sony.git" target="_blank">GitHub</a></li>
+                                        <li><a href="https://www.sony.co.kr/" target="_blank">Origin</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="publ-box">
+                                    <h3>SONY</h3>
+                                    <p><img src="http://placehold.it/250x350" alt=""></p>
+                                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatem cupiditate dolorum, optio aperiam tenetur corrupti natus dolore itaque, eveniet necessitatibus perferendis quod? Tempora facilis aspernatur reprehenderit eligendi suscipit soluta natus.</p>
+                                    <p>HTML5, CSS3, JavaScript, jQuery</p>
+                                    <ul>
+                                        <li><a href="work/sony/index.html" target="_blank">Work</a></li>
+                                        <li><a href="https://github.com/HalfMoonKim/04.sony.git" target="_blank">GitHub</a></li>
+                                        <li><a href="https://www.sony.co.kr/" target="_blank">Origin</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="front" id="frontend">
+            <div class="container">
+                <!-- 별도 페이지 _blank 및 GitHub 로 연결하시길 권장 -->
+                <h2>Frontend</h2>
+                <!-- <div class="front-wrap">
+                    <a href="#" target="_blank">
+                        타이틀 : TO-DO 웹어플리케이션
+                        설명글,
+                        적용 기술: html, css, js, vue.js, mySql, Bootstrab,
+                        온라인 DB 서버 연동 고민
+                    </a>
+                    <a href="todo.apk" target="_blank">
+                        타이틀 : TO-DO 웹어플리케이션 안드로이드 앱(PWA/하이브리드앱)
+                        설명글,
+                        적용 기술: html, css, js, vue.js, mySql, Bootstrab, Cordova
+                        온라인 DB 서버 연동 고민
+                    </a> 
+                </div>-->
+                <div class="front-wrap clearfix">
+                    <div class="front-menu">
+
+                    </div>
+                    <div class="front-main">
+                        <img src="work/etc0/etc0.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="design" id="design">
+            <div class="container">
+                <!-- swiper 로 구현하시기를 권장 합니다. -->
+                <h2>Design</h2>
+                <div class="design-wrap">
+                    <!-- Nice Scroll 을 이용하여서 스크롤링으로 보여주기 
+                    타이틀
+                    짧은 설명,
+                    사용도구
+
+                     http://www.hongsidesign.com/main/sub03_work/sub03_01_current_list.jsp
+                    a _blank   프로세스
+                    a _blank   결과물
+                    a _blank   오리지널 사이트 -->
+
+                </div>
+
+                <div class="swiper-container sw-design">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="design-box">
+                                <h3>Casper 리디자인</h3>
+                                <p><img src="http://placehold.it/250x350" alt=""></p>
+                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quisquam, fuga voluptatum voluptas vitae laboriosam vel et fugiat similique dolorem ad totam voluptate! Eos dolorem dolorum eum dignissimos tempore. Exercitationem, harum.</p>
+                                <p>photoshop, illustator, Adobe XD</p>
+                                <ul>
+                                    <li><a href="work/redesign1/process.html" target="_blank">Process</a></li>
+                                    <li><a href="work/redesign1/design.html" target="_blank">Work</a></li>
+                                    <li><a href="https://casper.hyundai.com/" target="_blank">Origin</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="design-box">
+                                <h3>Casper 리디자인</h3>
+                                <p><img src="http://placehold.it/250x350" alt=""></p>
+                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quisquam, fuga voluptatum voluptas vitae laboriosam vel et fugiat similique dolorem ad totam voluptate! Eos dolorem dolorum eum dignissimos tempore. Exercitationem, harum.</p>
+                                <p>photoshop, illustator, Adobe XD</p>
+                                <ul>
+                                    <li><a href="work/redesign2/process.html" target="_blank">Process</a></li>
+                                    <li><a href="work/redesign2/design.html" target="_blank">Work</a></li>
+                                    <li><a href="https://casper.hyundai.com/" target="_blank">Origin</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="design-box">
+                                <h3>Casper 리디자인</h3>
+                                <p><img src="http://placehold.it/250x350" alt=""></p>
+                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quisquam, fuga voluptatum voluptas vitae laboriosam vel et fugiat similique dolorem ad totam voluptate! Eos dolorem dolorum eum dignissimos tempore. Exercitationem, harum.</p>
+                                <p>photoshop, illustator, Adobe XD</p>
+                                <ul>
+                                    <li><a href="work/redesign3/process.html" target="_blank">Process</a></li>
+                                    <li><a href="work/redesign3/design.html" target="_blank">Work</a></li>
+                                    <li><a href="https://casper.hyundai.com/" target="_blank">Origin</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="design-box">
+                                <h3>Casper 리디자인</h3>
+                                <p><img src="http://placehold.it/250x350" alt=""></p>
+                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quisquam, fuga voluptatum voluptas vitae laboriosam vel et fugiat similique dolorem ad totam voluptate! Eos dolorem dolorum eum dignissimos tempore. Exercitationem, harum.</p>
+                                <p>photoshop, illustator, Adobe XD</p>
+                                <ul>
+                                    <li><a href="work/redesign4/process.html" target="_blank">Process</a></li>
+                                    <li><a href="work/redesign4/design.html" target="_blank">Work</a></li>
+                                    <li><a href="https://casper.hyundai.com/" target="_blank">Origin</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        
+        <section class="life" id="life">
+            <div class="container">
+                <!-- 포토샵으로 작업하셔서 배치하시면 어떨지 -->
+                <h2>Life</h2>
+                <div class="life-wrap">
+                    고양이 등등. 
+                    취미, 긍적적이고 활동적인 느낌을 전달
+                    
+                </div>
+            </div>
+        </section>
+        
+        <section class="contact" id="contact">
+            <div class="container">
+                <!-- 생일, 전화번호, 카카오 등 공개 금지 이메일 -->
+                <!-- 본인의 비전... 등... 격언, 이메일 .... -->
+                <h2>Contact</h2>
+                <div class="contact-wrap">
+                    GitHub, 이메일, PDF 다운로드(네이버, 또는 구글드라이브)
+                </div>
+            </div>
+        </section>
+
     </div>
 </body>
 
